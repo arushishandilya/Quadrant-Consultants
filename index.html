@@ -82,7 +82,7 @@
 								</li>
 								<li><a href="services.html" style=" color: white;font-weight: bold;">Services</a></li>
 								<li><a href="about.html" style=" color: white;font-weight: bold;">About US</a></li>
-								<li><a href="about.html" style=" color: white;font-weight: bold;">Gallery</a></li>
+								<li><a href="gallery.html" style=" color: white;font-weight: bold;">Gallery</a></li>
 								<!-- Added button -->
 								<a href="contact.html" class="btn btn-primary" style="border-radius: 20px;">Contact
 									Us</a>
@@ -222,127 +222,148 @@
 
 							<!-- what we offer section start -->
 							<div id="general" class="tab-pane fade">
-								<div class="row">
-									<!--Card1-->
+								<div class="row g-4">
+
+									<!-- Card1 -->
 									<div class="col-md-4 animate-box">
 										<div class="project-entry">
-											<a href="services.html" class="project-img text-center"
-												style="background-image: url(images/whatweoffer/1.webp); background-size: contain; /* shows full image */background-repeat: no-repeat; background-position: center; display: block;height: 250px; /* adjust height as needed */ width: 100%; position: relative;"></a>
-											<div class="desc text-center mt-2">
-												<h3><a href="project.html">CONSULTING ENGINEERS</a></h3>
+											<a href="services.html" class="project-img"
+												style="background-image: url(images/whatweoffer/1.webp);"></a>
+											<div class="desc text-center">
+												<h3>CONSULTING ENGINEERS</h3>
 											</div>
 										</div>
 									</div>
-									<!--Card2-->
+
+									<!-- Card2 -->
 									<div class="col-md-4 animate-box">
 										<div class="project-entry">
-											<a href="services.html" class="project-img text-center"
-												style="background-image: url(images/whatweoffer/2.webp); background-size: contain; /* shows full image */background-repeat: no-repeat; background-position: center; display: block;height: 250px; /* adjust height as needed */ width:100%; position: relative;"></a>
-											<div class="desc text-center mt-2">
-												<h3><a href="project.html">Design & Proof Check</a></h3>
+											<a href="services.html" class="project-img"
+												style="background-image: url(images/whatweoffer/2.webp);"></a>
+											<div class="desc text-center">
+												<h3>Design & Proof Check</h3>
 											</div>
 										</div>
 									</div>
-									<!--Card3-->
+
+									<!-- Card3 -->
 									<div class="col-md-4 animate-box">
 										<div class="project-entry">
-											<a href="services.html" class="project-img text-center"
-												style="background-image: url(images/whatweoffer/3.webp); background-size: contain; /* shows full image */background-repeat: no-repeat; background-position: center; display: block;height: 250px; /* adjust height as needed */ width:100%; position: relative;"></a>
-											<div class="desc text-center mt-2">
-												<h3><a href="project.html">Risk Management</a></h3>
+											<a href="services.html" class="project-img"
+												style="background-image: url(images/whatweoffer/3.webp);"></a>
+											<div class="desc text-center">
+												<h3>Risk Management</h3>
 											</div>
 										</div>
 									</div>
-									<!--Card4-->
+
+									<!-- Card4 -->
 									<div class="col-md-4 animate-box">
 										<div class="project-entry">
-											<a href="services.html" class="project-img text-center"
-												style="background-image: url(images/whatweoffer/4.webp); background-size: contain; /* shows full image */background-repeat: no-repeat; background-position: center; display: block; height: 250px; /* adjust height as needed */ width: 100%; position: relative;"></a>
-											<div class="desc text-center mt-2">
-												<h3><a href="project.html">MIS</a></h3>
+											<a href="services.html" class="project-img"
+												style="background-image: url(images/whatweoffer/4.webp);"></a>
+											<div class="desc text-center">
+												<h3>MIS</h3>
 											</div>
 										</div>
 									</div>
-									<!--Card5-->
+
+									<!-- Card5 -->
 									<div class="col-md-4 animate-box">
 										<div class="project-entry">
-											<a href="services.html" class="project-img text-center"
-												style="background-image: url(images/whatweoffer/5.webp); background-size: contain; /* shows full image */ background-repeat: no-repeat; background-position: center; display: block; height: 250px; /* adjust height as needed */ width: 100%; position: relative;"></a>
-											<div class="desc text-center mt-2">
-												<h3><a href="project.html">Modern Software Tools and Analysis</a></h3>
+											<a href="services.html" class="project-img"
+												style="background-image: url(images/whatweoffer/5.webp);"></a>
+											<div class="desc text-center">
+												<h3>Modern Software Tools and Analysis</h3>
 											</div>
 										</div>
 									</div>
+
+									
 
 								</div>
 							</div>
+
 							<style>
-								.project-img .icon {
+								.project-entry {
+									position: relative;
+									border-radius: 12px;
+									overflow: hidden;
+									transition: transform 0.3s ease, box-shadow 0.3s ease;
+								}
+
+								.project-entry:hover {
+									transform: translateY(-8px);
+									box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+								}
+
+								.project-img {
+									width: 100%;
+									height: 300px;
+									/* full card height */
+									background-size: cover;
+									background-position: center;
+									display: block;
+									transition: transform 0.4s ease;
+								}
+
+								.project-entry:hover .project-img {
+									transform: scale(1.05);
+								}
+
+								.desc {
+									position: absolute;
+									bottom: 0;
+									width: 100%;
+									padding: 12px 8px;
+									background: rgba(0, 0, 0, 0.5);
+									text-align: center;
+								}
+
+								.desc h3 {
 									color: #fff;
-									font-weight: bold;
-									/* background: rgba(224, 223, 223, 0.5); */
-									padding: 8px 15px;
-									border-radius: 5px;
-									transition: background 0.3s ease;
+									font-weight: 500;
+									font-size: 16px;
+									margin: 0;
+									text-transform: uppercase;
 								}
 
-								.project-img:hover .icon {
-									background: none;
+								/* Animation */
+								.animate-box {
+									opacity: 0;
+									transform: translateY(20px);
+									animation: fadeInUp 0.6s ease forwards;
 								}
 
-
-								/* Animation keyframes */
 								@keyframes fadeInUp {
-									from {
-										opacity: 0;
-										transform: translateY(40px);
-									}
-
 									to {
 										opacity: 1;
 										transform: translateY(0);
 									}
 								}
 
-								/* Apply to your animate-box cards */
-								.animate-box {
-									opacity: 0;
-									animation: fadeInUp 0.8s ease forwards;
-								}
-
-								/* Stagger animation for cards */
-								.col-md-4:nth-child(1) .animate-box {
+								.animate-box:nth-child(1) {
 									animation-delay: 0.1s;
 								}
 
-								.col-md-4:nth-child(2) .animate-box {
+								.animate-box:nth-child(2) {
 									animation-delay: 0.2s;
 								}
 
-								.col-md-4:nth-child(3) .animate-box {
+								.animate-box:nth-child(3) {
 									animation-delay: 0.3s;
 								}
 
-								.col-md-4:nth-child(4) .animate-box {
+								.animate-box:nth-child(4) {
 									animation-delay: 0.4s;
 								}
 
-								.col-md-4:nth-child(5) .animate-box {
+								.animate-box:nth-child(5) {
 									animation-delay: 0.5s;
 								}
-
-								/* Hover effect */
-								.project-entry {
-									transition: transform 0.3s ease, box-shadow 0.3s ease;
-								}
-
-								.project-entry:hover {
-									transform: translateY(-10px);
-									box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-								}
 							</style>
-
 							<!-- what we offer section end -->
+
 
 							<!-- Our Accomplishments start -->
 							<div id="manage" class="tab-pane fade">

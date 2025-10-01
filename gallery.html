@@ -1,6 +1,5 @@
 <!DOCTYPE HTML>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -77,7 +76,7 @@
                                 </li>
                                 <li><a href="services.html" style=" color: white;font-weight: bold;">Services</a></li>
                                 <li><a href="about.html" style=" color: white;font-weight: bold;">About US</a></li>
-                                <li><a href="about.html" style=" color: white;font-weight: bold;">Gallery</a></li>
+                                <li><a href="gallery" style=" color: white;font-weight: bold;">Gallery</a></li>
                                 <!-- Added button -->
                                 <a href="contact.html" class="btn btn-primary" style="border-radius: 20px;">Contact
                                     Us</a>
@@ -108,117 +107,273 @@
         </aside>
         <!-- end navbar -->
 
-        <!-- gallery start -->
-        <style>
-            .gallery-section {
-                padding: 60px 0;
-                background: #f9f9f9;
-            }
+    <!-- gallery start -->
+<div id="colorlib-gallery" class="colorlib-gallery">
+  <div class="container">
+    <div class="row text-center mb-5">
+    </div>
 
-            .gallery-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-                gap: 20px;
-            }
+    <!-- Filter Buttons -->
+    <div class="text-center mb-4 gallery-filters">
+      
+     
+    </div>
 
-            .gallery-item {
-                overflow: hidden;
-                border-radius: 12px;
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-                background: #fff;
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-            }
+    <!-- Gallery Grid -->
+    <div class="gallery-grid">
+      <!-- First visible items -->
+      <div class="gallery-item web">
+        <a href="images/blog-1.jpg" class="image-popup">
+          <img src="images/blog-6.jpg" alt="Project 1">
+          <div ><span></span></div>
+        </a>
+      </div>
+      <div class="gallery-item design">
+        <a href="images/gallery/img2.jpg" class="image-popup">
+          <img src="images/blog-2.jpg" alt="Project 2">
+          <div ><span></span></div>
+        </a>
+      </div>
+      <div class="gallery-item branding">
+        <a href="images/gallery/img3.jpg" class="image-popup">
+          <img src="images/blog-3.jpg" alt="Project 3">
+          <div ><span></span></div>
+        </a>
+      </div>
+      <div class="gallery-item web">
+        <a href="images/gallery/img4.jpg" class="image-popup">
+          <img src="images/blog-4.jpg" alt="Project 4">
+          <div ><span></span></div>
+        </a>
+      </div>
+      <div class="gallery-item design">
+        <a href="images/gallery/img5.jpg" class="image-popup">
+          <img src="images/blog-5.jpg" alt="Project 5">
+          <div ><span></span></div>
+        </a>
+      </div>
+      <div class="gallery-item branding">
+        <a href="images/gallery/img6.jpg" class="image-popup">
+          <img src="images/blog-6.jpg" alt="Project 6">
+          <div ><span></span></div>
+        </a>
+      </div>
 
-            .gallery-item img {
-                width: 100%;
-                height: 220px;
-                object-fit: cover;
-                border-radius: 12px;
-                transition: transform 0.4s ease;
-            }
+      <!-- Hidden items -->
+      <div class="gallery-item web hidden-item">
+        <a href="images/gallery/img7.jpg" class="image-popup">
+          <img src="images/blog-1.jpg" alt="Project 7">
+          <div class="overlay"><span>Web Project</span></div>
+        </a>
+      </div>
+      <div class="gallery-item design hidden-item">
+        <a href="images/gallery/img8.jpg" class="image-popup">
+          <img src="images/blog-2.jpg" alt="Project 8">
+          <div class="overlay"><span>Design Project</span></div>
+        </a>
+      </div>
+      <div class="gallery-item branding hidden-item">
+        <a href="images/gallery/img9.jpg" class="image-popup">
+          <img src="images/blog-3.jpg" alt="Project 9">
+          <div class="overlay"><span>Branding Project</span></div>
+        </a>
+      </div>
+    </div>
 
-            .gallery-item:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-            }
+    <!-- Show More Button -->
+    
+  </div>
+</div>
+<!-- gallery end -->
 
-            .gallery-item:hover img {
-                transform: scale(1.08);
-            }
+<!-- Gallery CSS -->
+<style>
+  #colorlib-gallery {
+    padding: 100px 0;
+    background: #fafafa;
+  }
 
-            .show-more {
-                text-align: center;
-                margin-top: 30px;
-            }
+  .section-title {
+    font-weight: 700;
+    font-size: 34px;
+    margin-bottom: 10px;
+    color: #222;
+    text-transform: uppercase;
+  }
 
-            .show-more a {
-                display: inline-block;
-                padding: 12px 28px;
-                background: linear-gradient(135deg, #18d4a5, #05579b);
-                color: #fff;
-                font-size: 16px;
-                font-weight: 600;
-                text-decoration: none;
-                border-radius: 30px;
-                box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-                transition: all 0.3s ease;
-            }
+  .section-title::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: #ff7e5f;
+    margin: 12px auto 0;
+    border-radius: 2px;
+  }
 
-            .show-more a:hover {
-                background: linear-gradient(135deg, #34ecbe, #357bf3);
-                transform: translateY(-2px);
-                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-            }
+  .section-subtitle {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 40px;
+  }
 
-            /* Hide initially */
-            .hidden {
-                display: none;
-            }
-        </style>
+  /* Filter Buttons */
+  .gallery-filters {
+    margin-bottom: 40px;
+  }
+  .filter-btn {
+    border: none;
+    background: #eee;
+    color: #333;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  .filter-btn:hover,
+  .filter-btn.active {
+    background: #ff7e5f;
+    color: #fff;
+  }
 
-        <div class="gallery-section container">
-            <div class="gallery-grid">
-                <!-- First visible images -->
-                <div class="gallery-item"><img src="images/img1.jpg" alt="Project 1"></div>
-                <div class="gallery-item"><img src="images/img2.jpg" alt="Project 2"></div>
-                <div class="gallery-item"><img src="images/img3.jpg" alt="Project 3"></div>
-                <div class="gallery-item"><img src="images/img4.jpg" alt="Project 4"></div>
-                <div class="gallery-item"><img src="images/img5.jpg" alt="Project 5"></div>
-                <div class="gallery-item"><img src="images/img6.jpg" alt="Project 6"></div>
-                <div class="gallery-item"><img src="images/img7.jpg" alt="Project 7"></div>
-                <div class="gallery-item"><img src="images/img8.jpg" alt="Project 8"></div>
+  /* Gallery Grid */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+  }
 
-                <!-- Hidden images -->
-                <div class="gallery-item hidden"><img src="images/img9.jpg" alt="Project 9"></div>
-                <div class="gallery-item hidden"><img src="images/img10.jpg" alt="Project 10"></div>
-                <div class="gallery-item hidden"><img src="images/img11.jpg" alt="Project 11"></div>
-                <div class="gallery-item hidden"><img src="images/img12.jpg" alt="Project 12"></div>
-            </div>
+  .gallery-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
 
-            <!-- Show More Button -->
-            <div class="show-more">
-                <a href="#" id="toggleBtn">+ Show More</a>
-            </div>
-        </div>
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+  }
 
-        <script>
-            const toggleBtn = document.getElementById('toggleBtn');
-            const hiddenItems = document.querySelectorAll('.hidden');
-            let isShown = false;
+  .gallery-item:hover img {
+    transform: scale(1.08);
+  }
 
-            toggleBtn.addEventListener('click', function (e) {
-                e.preventDefault();
-                isShown = !isShown;
+  .gallery-item .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.4s ease;
+    border-radius: 12px;
+  }
 
-                hiddenItems.forEach(item => {
-                    item.style.display = isShown ? 'block' : 'none';
-                });
+  .gallery-item:hover .overlay {
+    opacity: 1;
+  }
 
-                toggleBtn.textContent = isShown ? '− Show Less' : '+ Show More';
-            });
-        </script>
-        <!-- gallery end -->
+  .gallery-item .overlay span {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
 
+  /* Hidden items */
+  .hidden-item {
+    display: none;
+  }
+
+  /* Show More Button */
+  .show-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  }
+
+  .show-more-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Arrow Icon */
+  .arrow {
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 4px;
+    transition: transform 0.3s ease;
+  }
+
+  .down {
+    transform: rotate(45deg);
+  }
+
+  .up {
+    transform: rotate(-135deg);
+  }
+</style>
+
+<!-- JS for Isotope Filtering + Magnific Popup -->
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script>
+  $(document).ready(function () {
+    // Magnific Popup
+    $('.image-popup').magnificPopup({
+      type: 'image',
+      gallery: { enabled: true },
+      removalDelay: 300,
+      mainClass: 'mfp-fade'
+    });
+
+    // Isotope Filter
+    var $grid = $('.gallery-grid').isotope({
+      itemSelector: '.gallery-item',
+      layoutMode: 'fitRows'
+    });
+
+    $('.filter-btn').on('click', function () {
+      $('.filter-btn').removeClass('active');
+      $(this).addClass('active');
+      var filterValue = $(this).attr('data-filter');
+      $grid.isotope({ filter: filterValue });
+    });
+
+    // Show More Button (Toggle)
+    $('#showMoreBtn').on('click', function () {
+      var hiddenItems = $('.hidden-item');
+      if (hiddenItems.is(':visible')) {
+        hiddenItems.slideUp();
+        $(this).find("span").text("Show More");
+        $(this).find(".arrow").removeClass("up").addClass("down");
+      } else {
+        hiddenItems.slideDown();
+        $grid.isotope('layout');
+        $(this).find("span").text("Show Less");
+        $(this).find(".arrow").removeClass("down").addClass("up");
+      }
+    });
+  });
+</script>
 
 
 
