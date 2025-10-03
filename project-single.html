@@ -198,126 +198,262 @@
 			</div>
 		</div>
 		
-		<div id="colorlib-subscribe">
-			<div class="overlay"></div>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
-						<h2>Subscribe Newsletter</h2>
-						<p>Subscribe our newsletter and get latest update</p>
-					</div>
-				</div>
-				<div class="row animate-box">
-					<div class="col-md-6 col-md-offset-3">
-						<div class="row">
-							<form class="form-inline qbstp-header-subscribe">
-								<div class="col-three-forth">
-									<div class="form-group">
-										<input type="text" class="form-control" id="email" placeholder="Enter your email">
-									</div>
-								</div>
-								<div class="col-one-third">
-									<div class="form-group">
-										<button type="submit" class="btn btn-primary">Subscribe Now</button>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		<!--footer start  -->
 		<footer id="colorlib-footer">
+
 			<div class="contact-information">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2">
-							<div class="row">
-								<div class="col-md-4 text-center">
-									<div class="info-wrap">
-										<span class="icon"><i class="icon-location4"></i></span>
-										<p>291 South 21th Street, <br> Suite 721 New York NY 10016</p>
-									</div>
-								</div>
-								<div class="col-md-4 text-center">
-									<div class="info-wrap">
-										<span class="icon"><i class="icon-world"></i></span>
-										<p><a href="#">info@example.com</a> <br> <a href="#">www.example.com</a></p>
-									</div>
-								</div>
-								<div class="col-md-4 text-center">
-									<div class="info-wrap">
-										<span class="icon"><i class="icon-phone2"></i></span>
-										<p><a href="#">(001) 2345 6789</a> <br> <a href="#">(001) 9876 5432</a></p>
-									</div>
-								</div>
+				<!-- Contact Button -->
+				<div class="text-center my-4">
+					<a href="#contact-form" class="btn-contact" style="border-radius: 40px;">DROP US A LINE!</a>
+				</div>
+				<!-- Modal -->
+				<div id="contactModal" class="modal">
+					<div class="modal-content">
+						<span class="close">&times;</span>
+						<h2>Drop Us A Line!</h2>
+						<form>
+							<label for="name">Name*</label>
+							<input type="text" id="name" name="name" required>
+
+							<label for="contact">Contact No.*</label>
+							<input type="text" id="contact" name="contact" required>
+
+							<label for="email">Email*</label>
+							<input type="email" id="email" name="email" required>
+
+							<label for="message">Your Message</label>
+							<textarea id="message" name="message"></textarea>
+
+							<div class="form-actions">
+								<button type="submit" class="btn-contact">SEND</button>
+								<a href="#" id="cancelBtn">Cancel</a>
 							</div>
-						</div>
+						</form>
 					</div>
 				</div>
+
+				<!-- CSS -->
+				<style>
+					.modal-content input,
+					.modal-content textarea {
+						width: 100%;
+						padding: 8px;
+						border: none;
+						border-bottom: 1px solid #ccc;
+						margin-bottom: 15px;
+						font-size: 14px;
+						outline: none;
+						background: #fff;
+						/* white background */
+						color: #000;
+						/* black text */
+					}
+
+					.modal-content label {
+						color: #000;
+						/* make labels visible */
+					}
+
+					/* Modal background */
+					.modal {
+						display: none;
+						position: fixed;
+						z-index: 9999;
+						left: 0;
+						top: 0;
+						width: 100%;
+						height: 100%;
+						overflow: auto;
+						background: rgba(0, 0, 0, 0.5);
+					}
+
+					/* Modal box */
+					.modal-content {
+						background: #fff;
+						margin: 8% auto;
+						padding: 25px 30px;
+						border-radius: 8px;
+						width: 400px;
+						position: relative;
+						box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+					}
+
+					.modal-content h2 {
+						text-align: center;
+						margin-bottom: 20px;
+						font-size: 18px;
+						text-transform: uppercase;
+					}
+
+					.modal-content label {
+						display: block;
+						margin: 10px 0 5px;
+						font-weight: bold;
+					}
+
+					.modal-content input,
+					.modal-content textarea {
+						width: 100%;
+						padding: 8px;
+						border: none;
+						border-bottom: 1px solid #ccc;
+						margin-bottom: 15px;
+						font-size: 14px;
+						outline: none;
+					}
+
+					.modal-content textarea {
+						height: 80px;
+						resize: none;
+					}
+
+					.form-actions {
+						text-align: center;
+						margin-top: 15px;
+					}
+
+					.form-actions a {
+						margin-left: 15px;
+						color: #666;
+						text-decoration: none;
+					}
+
+					.form-actions a:hover {
+						text-decoration: underline;
+					}
+
+					.close {
+						position: absolute;
+						top: 12px;
+						right: 15px;
+						font-size: 22px;
+						font-weight: bold;
+						color: #666;
+						cursor: pointer;
+					}
+
+					.close:hover {
+						color: #000;
+					}
+				</style>
+
+				<!-- jQuery -->
+				<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+				<script>
+					$(document).ready(function () {
+						// Open modal when button clicked
+						$(".btn-contact").click(function (e) {
+							e.preventDefault();
+							$("#contactModal").fadeIn();
+						});
+
+						// Close modal when X or Cancel clicked
+						$(".close, #cancelBtn").click(function (e) {
+							e.preventDefault();
+							$("#contactModal").fadeOut();
+						});
+
+						// Close modal when clicking outside content
+						$(window).click(function (e) {
+							if ($(e.target).is("#contactModal")) {
+								$("#contactModal").fadeOut();
+							}
+						});
+					});
+				</script>
+
+
+				<!-- CSS -->
+				<style>
+					.btn-contact {
+						display: inline-block;
+						padding: 12px 30px;
+						border: 2px solid #F7B633;
+						background: transparent;
+						color: #F7B633;
+						font-size: 16px;
+						font-weight: bold;
+						text-transform: uppercase;
+						text-decoration: none;
+						transition: all 0.3s ease-in-out;
+					}
+
+					.btn-contact:hover {
+						background: #F7B633;
+						color: #000;
+						text-decoration: none;
+					}
+				</style>
+
 			</div>
 			<div class="container">
 				<div class="row row-pb-md">
 					<div class="col-md-3 colorlib-widget">
-						<h4>About Complex</h4>
-						<p>Far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
+						<h4>About Quadrant</h4>
+						<p>Quadrant Consultants is a growing organization in providing end to end Civil Engineering
+							Management Consulting Services that form the basic building blocks required for implementing
+							the Project Management.</p>
 						<p>
-							<ul class="colorlib-social-icons">
-								<li><a href="#"><i class="icon-twitter"></i></a></li>
-								<li><a href="#"><i class="icon-facebook"></i></a></li>
-								<li><a href="#"><i class="icon-linkedin"></i></a></li>
-								<li><a href="#"><i class="icon-dribbble"></i></a></li>
-							</ul>
+							<!-- <ul class="colorlib-social-icons">
+							<li><a href="#"><i class="icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon-linkedin"></i></a></li>
+							<li><a href="#"><i class="icon-dribbble"></i></a></li>
+						</ul> -->
 						</p>
 					</div>
 					<div class="col-md-3 col-md-push-1 colorlib-widget">
-						<h4>Information</h4>
+						<h4>Useful Links</h4>
 						<p>
-							<ul class="colorlib-footer-links">
-								<li><a href="#"><i class="icon-check"></i> Our Company</a></li>
-								<li><a href="#"><i class="icon-check"></i> Certification</a></li>
-								<li><a href="#"><i class="icon-check"></i> Our services</a></li>
-								<li><a href="#"><i class="icon-check"></i> Career</a></li>
-								<li><a href="#"><i class="icon-check"></i> Core Values</a></li>
-								<li><a href="#"><i class="icon-check"></i> Company History</a></li>
-								<li><a href="#"><i class="icon-check"></i> FAQ</a></li>
-							</ul>
+						<ul class="colorlib-footer-links">
+							<li><a href="index.html"><i class="icon-check"></i> Home</a></li>
+							<li><a href="about.html"><i class="icon-check"></i> About Us</a></li>
+							<li><a href="project.html"><i class="icon-check"></i> Projects</a></li>
+							<li><a href="services.html"><i class="icon-check"></i> Our Services</a></li>
+						</ul>
 						</p>
 					</div>
 
-					<div class="col-md-3 colorlib-widget">
-						<h4>Instagram</h4>
-						<div class="instagram">
-							<a href="#" class="insta-img" style="background-image: url(images/building-1.jpg);"></a>
-							<a href="#" class="insta-img" style="background-image: url(images/building-2.jpg);"></a>
-							<a href="#" class="insta-img" style="background-image: url(images/building-3.jpg);"></a>
-							<a href="#" class="insta-img" style="background-image: url(images/building-4.jpg);"></a>
-							<a href="#" class="insta-img" style="background-image: url(images/building-5.jpg);"></a>
-							<a href="#" class="insta-img" style="background-image: url(images/building-6.jpg);"></a>
-						</div>
+					<div class="col-md-3 col-md-push-1 colorlib-widget">
+						<h4>What We Offer</h4>
+						<p>
+						<ul class="colorlib-footer-links">
+							<li><a href="#"><i class="icon-check"></i>MIS</a></li>
+							<li><a href="#"><i class="icon-check"></i>Risk Management</a></li>
+							<li><a href="#"><i class="icon-check"></i>Consulting Engineers</a></li>
+							<li><a href="#"><i class="icon-check"></i>Design & Proof Check</a></li>
+							<li><a href="#"><i class="icon-check"></i>Modern Software & Analysis</a></li>
+						</ul>
+						</p>
 					</div>
+
+
 
 					<div class="col-md-3 col-md-push-1 colorlib-widget">
 						<h4>Contact Info</h4>
 						<ul class="colorlib-footer-links">
-							<li>291 South 21th Street, <br> Suite 721 New York NY 10016</li>
-							<li><a href="tel://1234567920"><i class="icon-phone"></i> + 1235 2355 98</a></li>
-							<li><a href="mailto:info@yoursite.com"><i class="icon-envelope"></i> info@yoursite.com</a></li>
-							<li><a href="http://luxehotel.com"><i class="icon-location4"></i> yourwebsite.com</a></li>
+							<li>204, Aaryan Plaza, Ashoka Marg <br>Nashik, Maharashtra - 422011</li>
+							<li><a
+									href="https://api.whatsapp.com/send/?phone=918766673535&text&type=phone_number&app_absent=0"><i
+										class="icon-phone"></i> Get In Touch</a></li>
+							</li>
+							<li><a href="http://luxehotel.com"><i class="icon-clock"></i> Mon - Sat: 9:00 AM - 7:00
+									PM</a></li>
+
 						</ul>
 					</div>
 				</div>
 			</div>
+
 			<div class="copy">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12 text-center">
 							<p>
-								<small class="block">
-									<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> | Made with <i class="icon-heart3" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> &amp; distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-								</small>
+							<footer class="text-center py-3">
+								<p>© 2025 Quadrant Consultants. All Rights Reserved.</p>
+							</footer>
+
 							</p>
 						</div>
 					</div>
@@ -329,7 +465,15 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> | Mad
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
 	</div>
+	<style>
+		footer p {
+			font-size: 14px;
+			color: #777;
+		}
+	</style>
+
 	
+
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
@@ -352,6 +496,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> | Mad
 	<!-- Main -->
 	<script src="js/main.js"></script>
 
-	</body>
-</html>
 
+
+</body>
+
+</html>
