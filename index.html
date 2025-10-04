@@ -279,7 +279,7 @@
 										</div>
 									</div>
 
-									
+
 
 								</div>
 							</div>
@@ -472,16 +472,17 @@
 										<img src="images/clientile/Govt Logos/8.png" alt="Client 8">
 									</div>
 								</div>
-
-								<!-- View More Button -->
-								<div style="display: flex; justify-content: center; margin-top: 20px;">
-									<a href="#" class="btn btn-primary" style="border-radius: 20px;">View More</a>
-								</div>
-
 							</div>
-							<!-- Clientele end -->
-
 							<style>
+								.clientele-row {
+									margin-top: 30px;
+									display: grid;
+									grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+									gap: 15px;
+									justify-items: center;
+									align-items: center;
+								}
+
 								.clientele-row {
 									margin-top: 30px;
 									display: grid;
@@ -536,6 +537,19 @@
 										background-position: 0% 50%;
 									}
 								}
+
+								@media (max-width: 992px) {
+									.clientele-row {
+										grid-template-columns: repeat(4, 1fr);
+									}
+								}
+
+								@media (max-width: 576px) {
+									.clientele-row {
+										grid-template-columns: repeat(2, 1fr);
+									}
+								}
+
 
 								.client-box img {
 									max-width: 80%;
@@ -864,7 +878,7 @@
 		}
 	</style>
 
-	
+
 
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
